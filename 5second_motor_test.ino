@@ -33,6 +33,17 @@ void loop() {
   Serial.println("Running motors 4 and 5");
   runTwoMotors(ESC4, ESC5, 5 * 1000); // Run motors 4 and 5 for 5 seconds
 
+  Serial.println("Running motors 2 and 5");
+  runTwoMotors(ESC2, ESC5, 5 * 1000);
+
+  Serial.println("Running motors 3 and 5");
+  runTwoMotors(ESC3, ESC5, 5 * 1000);
+  
+  Serial.println("Running motors 4 and 5");
+  runTwoMotors(ESC4, ESC5, 5 * 1000);
+  
+
+
   delay(10000); // Delay 10 seconds before running the motors again
 }
 
