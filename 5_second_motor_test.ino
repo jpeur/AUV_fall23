@@ -13,10 +13,10 @@ void setup() {
   Serial.begin(9600);
   Serial.println("begin");
 
-  ESC2.attach(2,600,2250);
-  ESC3.attach(3,600,2250);
-  ESC4.attach(4,600,2250);
-  ESC5.attach(5,600,2250);
+  ESC2.attach(2, 600, 2250);
+  ESC3.attach(3, 600, 2250);
+  ESC4.attach(4, 600, 2250);
+  ESC5.attach(5, 600, 2250);
 
   ESC2.write(s2);
   ESC3.write(s3);
@@ -33,18 +33,22 @@ void loop() {
   Serial.println("Running motors 4 and 5");
   runTwoMotors(ESC4, ESC5, 5 * 1000); // Run motors 4 and 5 for 5 seconds
 
+  delay(1000); // Optional delay between the motor groups
+
   Serial.println("Running motors 2 and 5");
   runTwoMotors(ESC2, ESC5, 5 * 1000);
+
+  delay(1000); // Optional delay between the motor groups
 
   Serial.println("Running motors 3 and 5");
   runTwoMotors(ESC3, ESC5, 5 * 1000);
   
+  delay(1000); // Optional delay between the motor groups
+
   Serial.println("Running motors 4 and 5");
   runTwoMotors(ESC4, ESC5, 5 * 1000);
-  
 
-
-  delay(10000); // Delay 10 seconds before running the motors again
+  delay(1000); // Optional delay between the motor groups
 }
 
 void runTwoMotors(Servo motor1, Servo motor2, int duration) {
