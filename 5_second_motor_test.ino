@@ -1,7 +1,8 @@
 #include <Servo.h>
 
-const int MAX_FORWARD = 180;
+const int MAX_FORWARD = 170;
 const int NEUTRAL = 90;
+const int MAX_REVERSE = 10;
 
 Servo ESC2, ESC3, ESC4, ESC5;
 int s2 = NEUTRAL;
